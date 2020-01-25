@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer{
+  text-align:center;
+  padding:3px 0;
+  font-size:.7rem;
+}
+
+.content{
+  padding-top:13vh;
+  box-sizing:border-box;
+  min-height:100vh;
+}
+
+
+.content.welcome{
+  height:100vh;
+  flex-direction:column;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.content>h1{
+  text-align:center;
+  color:white
+}
+
+
+.content.login{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content.about .text-area{
+  color:white;
+  margin-top:10vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  text-align: center;
+  font-size: 19px;
+}
+
+.content.about .text-area .breaker{
+  height:5px;
+  width:30px;
+  margin:10px 0;
+  background:#4caf50
+}

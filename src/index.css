@@ -1,0 +1,38 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background:black;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  position:relative
+}
+
+body::before{
+  
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+  height:100%;
+  width:100%;
+  opacity: .5;
+  background-image: url("./assets/img/newyork.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position:center;
+  animation-name: wallpaper;
+  mix-blend-mode: lighten;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  content:'';
+}
+@keyframes wallpaper {
+  20%   {background-image: url("./assets/img/newyork.jpeg");}
+  45%  {background-image: url("./assets/img/paris.jpeg");}
+  70%  {background-image: url("./assets/img/switzerland.jpg");}
+  95% {background-image: url("./assets/img/india.jpg");}
+}
