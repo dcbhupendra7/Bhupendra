@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Tour from '../Tour/Tour';
-import tourdata from '../TourList/tourData'
+import tourdata from '../TourList/tourData1'
+import {messageService} from './blist';
 import '../All.css';
 
 class Booked extends Component {
@@ -18,14 +19,19 @@ class Booked extends Component {
         }
     }
     removeTour = id => {
-        const {tours} = this.state;
-        const sortedTours = tours.filter(tour => tour.id !== id);
-        this.setState({
-            tours: sortedTours
-        });
+        
     }
     componentDidMount(){
         this.updateBookedList(this.props.match.params.package);
+        // this.subscription=messageService.addpackage.subscribe(message=>{
+        //     if(message!=0){
+        //         const {tours} = this.state;
+        //         const sortedTours = tours.filter(tour => tour.id !== message);
+        //         this.setState({
+        //             tours: sortedTours
+        //     });
+        //     }
+        // })
     }
     render() {
         const {bookedlist} = this.state;

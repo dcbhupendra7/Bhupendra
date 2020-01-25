@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import tourData from './tourData';
+import tourData from './tourData1';
 import Dialogs from "../Dialogs";
 import '../All.css';
 
@@ -8,11 +8,11 @@ class Package extends Component {
         tours: tourData,
         isOpen:false
     };
-    // modalToggleHandler = () => {
-    //     this.setState({
-    //         isOpen: !this.state.isOpen
-    //     })
-    // };
+    modalToggleHandler = () => {
+        this.setState({
+            isOpen: !this.state.isOpen
+        })
+    };
     getTourInfo=(id)=>{
         const {tours} = this.state;
         const sortedTours = tours.filter(tour => tour.id == id)[0];
@@ -50,11 +50,11 @@ class Package extends Component {
                             );
                             })} */}
                     <div className="price-description-area">
-                        <button onClick={()=>this.props.history.replace('/BookingList/'+tours.id)} className="price-description">150$</button>
+                        <button onClick={this.modalToggleHandler} className="price-description">Rs 3000/person</button>
                     </div>
-                    {/* {this.state.isOpen ?<Dialogs modalToggle={this.modalToggleHandler}/> : ''} */}
+                    {this.state.isOpen ?<Dialogs id={tours.id} modalToggle={this.modalToggleHandler}/> : ''}
                 </div>
-                
+                {/* {()=>this.props.history.replace('/BookingList/'+tours.id)} */}
             </section>
         )
     }

@@ -15,7 +15,9 @@ class NavBar extends Component {
     };
     
     render() {
+        const {login}=this.props;
         return (
+
             <nav className="navbar">
                 <img src={logo} alt = 'city tours logo' onClick={()=>this.props.history.push('/')} className="image-logo" />
                 <div className="nav-links">
@@ -28,14 +30,10 @@ class NavBar extends Component {
                 </div>
                 <div className='cornernav'>
                 <Search/>
-                <div className='dropdown'>
-                    <div className='fa fa-user-circle-o' id="dropbtn" style={{color: "white"}}></div>
-                        <div className="dropdown-content">
-                            <NavLink className='LogButton' to='/Login'>Log In</NavLink>
-                            <NavLink className='LogButton' to='/SignUp'>Sign Up</NavLink>
-                        </div>
+
                     
-                </div></div>
+                    <div className='fa fa-user-circle-o' id="dropbtn" style={{color: "white",}} onClick={()=>this.props.history.push('/Login')}></div>
+            </div>
             </nav>    
         )
     }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Tour from '../Tour/Tour';
-import tourData from './tourData';
+import tourData from './tourData1';
 import '../All.css';
 
 class AfterSearch extends Component {

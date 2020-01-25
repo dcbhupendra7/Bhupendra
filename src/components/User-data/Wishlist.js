@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Tour from '../Tour/Tour';
-import tourdata from '../TourList/tourData'
+import tourdata from '../TourList/tourData1'
 import '../All.css';
 
 class Wishlist extends Component {
@@ -37,7 +37,6 @@ class Wishlist extends Component {
                         return(
                         <Tour key={tour.id} tour={tour} removeTour = {this.removeTour}/>
                         )
-
                     })}
                 </div>
             </section>
