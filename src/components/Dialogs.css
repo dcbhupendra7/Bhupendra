@@ -13,7 +13,7 @@
 
 .modal-box{
     padding:20px;
-    background:white;
+    background:lightgray;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +30,7 @@
     text-align: center;
 }
 
-.modal .button-area {
+.modal button {
     margin: 20px 0;
 
 }
